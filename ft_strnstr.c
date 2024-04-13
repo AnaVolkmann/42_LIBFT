@@ -6,7 +6,7 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:12:06 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/12 19:42:58 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/13 17:09:41 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		j = 0;
 		while (big[i + j] != '\0' && big[i + j] == little[j] && i + j < len)
 		{
-			if (little[i + j] == '\0')
-				return ((char *)&big[i]);
 			j++;
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
 		}
 		i++;
 	}

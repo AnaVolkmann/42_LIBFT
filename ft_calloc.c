@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 20:09:54 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/13 17:58:57 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/04/13 17:54:07 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/04/13 18:49:56 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t num, size_t size)
 {
-	char	*dtr;
-	char	*str;
+	void	*ptr;
 
-	dtr = (char *)dest;
-	str = (char *)src;
-	if (!src && !dest)
-		return (dest);
-	if (dest < src)
-		ft_memcpy(dtr, str, n);
-	if (src < dest)
-	{
-		while (n--)
-			dtr[n] = str[n];
-	}
-	return (dest);
+	ptr = (void *)malloc(num * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, num * size);
+	return (ptr);
 }
 /*#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 int	main(void)
 {
-	const char	src[] = "galera";
-	char	dest[] = "de cauboi";
-	size_t	n = 0;
-	
-	printf("%s\n", (char *)ft_memmove(dest, src, n));
+	printf("ft_calloc: %p\n", ft_calloc(0, 0));
+	printf("calloc: %p\n", calloc(0, 0)); 
+
+	char *str;
+
+	str = calloc(sizeof(char), 7);
+	str[0] = 'm';
+	str[1] = 'a';
+	str[2] = 'r';
+	str[3] = 'c';
+	str[4] = 'e';
+	str[5] = 'l';
+	str[6] = 'o';
+	printf("%s\n", str);
 }*/

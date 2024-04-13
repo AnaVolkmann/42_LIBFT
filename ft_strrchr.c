@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 18:23:44 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/13 16:47:58 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/04/13 17:29:00 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/04/13 17:51:59 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	if (size > 0)
+	while (s[i])
+		i++;
+	while (i >= 0)
 	{
-		while (src[i] && i < size -1)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		if (s[i] == ((char)c))
+			return ((char *)&s[i]);
+		i--;
 	}
-	return (ft_strlen(src));
+	return ((char *)0);
 }
 /*#include <string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char	destino[] = "pong";
-	char	origem[] = "piiing";
-	unsigned int	size;
+	int	c = 0;
+	const char	*s = "ajijia";
 
-
-	size = 5;
-	printf("origem = %s\ndestino = %s\n", origem, destino);
-	ft_strlcpy(destino, origem, size);
-	printf("destino: %s\n", destino);
+	printf("%s\n", ft_strrchr(s, c));
 }*/

@@ -6,22 +6,28 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:54:39 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/11 20:43:27 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/13 17:46:51 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
-	while (n > 0 && (s1[i] != '\0' || s2[i] != '\0'))
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	i++;
-	n--;
+	while (n > 0 && (str1[i] != '\0' || str2[i] != '\0'))
+	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
+		n--;
+	}
 	return (0);
 }
 /*#include <stdio.h>
