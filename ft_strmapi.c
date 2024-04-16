@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 10:54:33 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/16 10:10:26 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/04/16 10:54:04 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/04/16 11:11:53 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+/*char funcao(unsigned int n, char c)
 {
-	while (*s)
-		write(fd, s++, 1);
-	write (fd, "\n", 1);
+	c = n + c;
+	return (c);
+}*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*str;
+	int		i;
+
+	str = ft_calloc(sizeof(char), ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
-/*int	main(void)
+/*#include <stdio.h>
+
+int	main(void)
 {
-	ft_putendl_fd("ana", 1);
+	printf("%s\n", ft_strmapi("abc", funcao));
 }*/

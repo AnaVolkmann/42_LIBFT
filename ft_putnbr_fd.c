@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 10:54:33 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/16 10:10:26 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/04/16 09:50:07 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/04/16 10:31:14 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	while (*s)
-		write(fd, s++, 1);
-	write (fd, "\n", 1);
+	if (n == -2147483648)
+	{
+		write (fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd((n / 10), fd);
+		n = n % 10;
+	}
+	if (n < 10)
+		ft_putchar_fd((n + 48), fd);
 }
 /*int	main(void)
 {
-	ft_putendl_fd("ana", 1);
+	ft_putnbr_fd(-2147483648, 1);
 }*/
