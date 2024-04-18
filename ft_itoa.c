@@ -6,7 +6,7 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:30:20 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/18 16:37:16 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:44:40 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 	result = (char *)malloc(sizeof(char) * (tam + 1));
 	if (!result)
 		return (NULL);
-	result[tam + 1] = '\0';
+	result[tam] = '\0';
 	if (numb < 0)
 	{
 		result[0] = '-';
@@ -62,6 +62,6 @@ char	*ft_itoa(int n)
 
 int	main(void)
 {
-	printf("%s\n", ft_itoa(-632));
+	printf("%s\n", ft_itoa(-623));
 	return (0);
-} */
+}  */
