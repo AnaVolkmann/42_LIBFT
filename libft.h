@@ -6,16 +6,16 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 21:05:47 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/22 19:30:20 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/23 13:49:01 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
-#include <stddef.h>
-#include <stdlib.h>
+# include <unistd.h>
+# include <stddef.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -31,7 +31,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strdup(const char *s);
-char    *ft_itoa(int n);
+char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
 char	**ft_split(char const *s, char c);
 char	*ft_strrchr(const char *s, int c);
