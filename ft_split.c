@@ -6,7 +6,7 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 11:33:32 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/23 13:43:32 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/23 20:41:49 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	count_words(const char *s, char c)
 	return (words);
 }
 
-static int	next_word(char const *s, char c)
+static int	tam_word(char const *s, char c)
 {
 	int	i;
 
@@ -65,14 +65,14 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*s != c)
 		{
-			result[i] = (char *)ft_calloc(sizeof(char), next_word(s, c) + 1);
+			result[i] = (char *)ft_calloc(sizeof(char), tam_word(s, c) + 1);
 			if (!result[i])
 			{
 				ft_free(result, i);
 				return (NULL);
 			}
-			ft_strlcpy(result[i++], s, next_word(s, c) + 1);
-			s += next_word(s, c);
+			ft_strlcpy(result[i++], s, tam_word(s, c) + 1);
+			s += tam_word(s, c);
 		}
 		s++;
 	}

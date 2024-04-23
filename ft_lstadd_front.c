@@ -6,22 +6,22 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 17:59:53 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/23 18:24:52 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/23 20:23:11 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (new && lst)
-    {
-        new->next = *lst;
-        *lst = new;
-    }
+	if (new && lst)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
 
-/* #include "libft.h"
+/*
 #include <stdio.h>
 
 int main(void)
@@ -29,6 +29,8 @@ int main(void)
     t_list *lst;
     t_list  *lst2;
     t_list  *new;
+    t_list  *temp;
+    int i;
 
     lst = malloc(sizeof(t_list));
     lst2 = malloc(sizeof(t_list));
@@ -39,7 +41,22 @@ int main(void)
     new = malloc(sizeof(t_list));
     new->content = "ABCD";
     new->next = NULL;
-    printf("%s\n", (char*)new->next);
+    temp = lst;
+    i = 0;
+    while(temp)
+    {
+        printf("no %i = %s\n", i, (char *) temp->content);
+        i++;
+        temp = temp->next;
+    }
 	ft_lstadd_front(&lst, new);
-	printf("%s", (char *)new->next);
-} */
+    printf("PASSOU PELA FUNCAO\n\n");
+    temp = lst;
+    i = 0;
+    while(temp)
+    {
+        printf("no %i = %s\n", i, (char *) temp->content);
+        i++;
+        temp = temp->next;
+    }
+}  */
