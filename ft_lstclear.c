@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 20:14:21 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/24 15:29:00 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/04/24 18:25:42 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/04/24 18:47:42 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new )
+/* void	ft_delete_node(void *conteudo)
 {
-	t_list	*last;
+	free(conteudo);
+} */
+void	ft_lstclear(t_list **lst, void (*del) (void *))
+{
+	t_list	*ptr;
+	t_list	*next;
 
-	if (*lst == NULL)
-		*lst = new;
-	else
+	ptr = *lst;
+	while (ptr)
 	{
-		last = *lst;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
+		next = ptr->next;
+		del(ptr->content);
+		free(ptr);
+		ptr = next;
 	}
+	*lst = NULL;
 }
+
 /* #include <stdio.h>
 
 int	main(void)
 {
-	t_list	*n1;
-	t_list	*new;
-	
-	n1 = ft_lstnew("ola eu sou um noh");
-	new = ft_lstnew("i am the new node");
-	ft_lstadd_back(&n1, new);
-	printf("%s\n", (char *) n1->content);
-	printf("%s\n", (char *) n1->next->content);
+	t_list	*list;
+
+	list = malloc(sizeof(t_list));
+    list->content = ft_strdup("abcd");
+	ft_lstclear(&list, ft_delete_node);
+	printf("o node foi corretamente excluido\n");
 } */

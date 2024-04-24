@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 20:14:21 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/24 15:29:00 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/04/24 18:54:46 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/04/24 20:11:03 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/* #include <stdio.h>
 
-void	ft_lstadd_back(t_list **lst, t_list *new )
+void	ft_testiter(void *ptr)
 {
-	t_list	*last;
+	printf("%s\n", (char *)ptr + 1);
+} */
 
-	if (*lst == NULL)
-		*lst = new;
-	else
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	while (lst && f)
 	{
-		last = *lst;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
 }
-/* #include <stdio.h>
+/* 
+
 
 int	main(void)
 {
-	t_list	*n1;
-	t_list	*new;
-	
-	n1 = ft_lstnew("ola eu sou um noh");
-	new = ft_lstnew("i am the new node");
-	ft_lstadd_back(&n1, new);
-	printf("%s\n", (char *) n1->content);
-	printf("%s\n", (char *) n1->next->content);
+	t_list	*lista;
+	t_list	*lista2 = NULL;
+
+	lista = malloc(sizeof(t_list));
+	lista2 = malloc(sizeof(t_list));
+	lista->content = "43";
+	lista->next = lista2;
+	lista2->content = "44";
+	lista2->next = 	NULL;
+	ft_lstiter(lista, ft_testiter);
+	return (0);
 } */

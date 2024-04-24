@@ -1,41 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 20:14:21 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/24 15:29:00 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/04/24 17:33:38 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/04/24 18:23:36 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new )
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*last;
+	int	i;
 
-	if (*lst == NULL)
-		*lst = new;
-	else
+	i = 1;
+	if (!lst)
+		return (0);
+	while (lst->next != NULL)
 	{
-		last = *lst;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
+		lst = lst->next;
+		i++;
 	}
+	return (i);
 }
+
 /* #include <stdio.h>
 
-int	main(void)
+int main(void)
 {
-	t_list	*n1;
-	t_list	*new;
-	
-	n1 = ft_lstnew("ola eu sou um noh");
-	new = ft_lstnew("i am the new node");
-	ft_lstadd_back(&n1, new);
-	printf("%s\n", (char *) n1->content);
-	printf("%s\n", (char *) n1->next->content);
+    t_list  *n1;
+	t_list	*n2;
+	t_list	*n3;
+	t_list	*n4;
+
+    n1 = malloc(sizeof(t_list));
+    n2 = malloc(sizeof(t_list));
+	n3 = malloc(sizeof(t_list));
+	n4 = malloc(sizeof(t_list));
+	n1->next = n2;
+	n2->next = n3;
+	n3->next = n4;
+	printf("%i\n",ft_lstsize(n1));
 } */

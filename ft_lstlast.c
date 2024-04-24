@@ -6,17 +6,17 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 20:17:32 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/23 20:53:07 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:37:57 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** @brief linhas 21: enquanto lst + 1 != de nulo...
+/** @brief linha 21: enquanto lst + 1 != de nulo...
 lst recebe o proximo elemento da lista/
 quanto o proximo elemento for nulo, 
 entao retornamos o ultimo elemento da lista
- @param lst no da lista passado como parametro
+ @param lst noh da lista passado como parametro
  @return retorna o ultimo no da lista 
  */
 t_list	*ft_lstlast(t_list *lst)
