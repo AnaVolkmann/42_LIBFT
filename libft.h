@@ -6,7 +6,7 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 21:05:47 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/24 18:54:14 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/28 11:18:25 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
-//t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
