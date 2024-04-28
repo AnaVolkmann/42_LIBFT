@@ -6,12 +6,17 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 11:23:34 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/14 11:38:35 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/28 12:58:28 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief compara os primeiros n bytes
+da área de memória str1 e da área de memória str2.
+ @param str1 e str2 ponteiros para um bloco de memoria.
+  @param n numeros de bytes a serem comparados.
+ */
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned char	*s1;

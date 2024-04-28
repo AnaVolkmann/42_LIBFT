@@ -6,12 +6,22 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 20:09:54 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/13 17:58:57 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/28 12:39:41 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief copia a contagem de bytes de src para destino. 
+Esta função permite copiar entre objetos que podem se 
+sobrepor como se src fosse primeiro copiado para um 
+array temporário.
+ @param dest - ponteiro para a matriz de destino para onde
+o conteúdo deve ser copiado.
+ @param src ponteiro para a fonte de dados a ser copiada.
+ @param n numero de bytes a ser copiado. 
+ @return um ponteiro para o destino. 
+*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*dtr;
