@@ -6,11 +6,15 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 11:33:32 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/23 20:41:49 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:39:00 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* count_words conta o numeor de palavras na string 's', uusando o delimitador
+percorrndo a string, incrementa words toda vez que a palavra eh encontrada.
+retorna o total de [alavras encontradas*/
 
 static int	count_words(const char *s, char c)
 {
@@ -30,6 +34,9 @@ static int	count_words(const char *s, char c)
 	return (words);
 }
 
+/*tam_word calcula o tamano de uma palavra (numero de charcteres ate encontrar
+o delimitador 'c') percorre a string ate encontrar o char 'c' ou o final da
+string, retorna o numero de chars antes do charactere 'c'.*/
 static int	tam_word(char const *s, char c)
 {
 	int	i;
@@ -40,6 +47,9 @@ static int	tam_word(char const *s, char c)
 	return (i);
 }
 
+/*ft_free libera memoria alocada para o array de strings, percorre o array
+da ultima ate a primeira posiao, liberando memoria de cada string,
+e em seguida do proprio array*/
 static int	ft_free(char **s, int n)
 {
 	while (n >= 0)
@@ -50,6 +60,15 @@ static int	ft_free(char **s, int n)
 	return ('\0');
 }
 
+/* aloca memoria para o array 'result' e divide a string 's' em substrigs
+usando 'c', percorre 's' ate encontrar todas as palavras, criando substrings
+e copiando-as para 'result'.*/
+/** @brief divide a string s em novas strings a partir de um separador
+indicado por c (delimitador)
+ @param s string a ser dividida.
+ @param c char delimitador
+ @return um array de novas strings resultante da divisao de s.
+*/
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -93,4 +112,4 @@ int	main(void)
 		printf("%i -> %s\n", i, t[i]);
 		i++;
 	}
-}  */
+} */

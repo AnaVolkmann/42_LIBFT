@@ -6,12 +6,16 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:06:55 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/18 12:31:32 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:49:07 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief concatena duas strings.
+ @param s1 e s2 sao string a serem concatenadas.
+ @return uma nova string resultado da juncao de s1 e s2.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;

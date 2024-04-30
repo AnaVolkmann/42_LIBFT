@@ -6,12 +6,20 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 12:32:41 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/18 14:07:41 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:20:39 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief remove os characteres especificados em set de s1 no inicio
+e no final da string 
+ @param s1 string a ser aparada
+ @param set characeres a serem cortados
+ @return a string aparada
+*/
+// linha 38 - Extrai a substring de s1 que começa
+// no índice first e termina no índice last - 1.
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	first;

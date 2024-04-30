@@ -6,12 +6,18 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 20:25:48 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/13 16:54:58 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 13:06:53 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief apaga os dados ate n bytes de memoria, comecando na localizacao
+apontada por s, escrevendo zeros(bytes contendo '\0') baquela area de memoria.
+ @param s pointer para a  area de memoria a ser alterada
+ @param n limitador.
+@return none.
+*/
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);

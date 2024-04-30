@@ -6,12 +6,17 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 19:12:06 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/13 17:09:41 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:08:56 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief lozaliza uma substring em uma string.
+ @param big string na qual a substring sera procurada.
+ @param little substring a ser procurada e big.
+ @param len tamanho ate aonda a big deve ser percorrida
+*/
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

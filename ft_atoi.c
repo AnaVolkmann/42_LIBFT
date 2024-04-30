@@ -6,10 +6,17 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 20:52:21 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/11 20:54:57 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 13:01:46 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+/** @brief converte o argumento strig str para um inteiro(tpe int)
+ @param str representacao em string de um numero inteiro.
+ @return numero integral convertido como um valor int. se nenhuma conversao 
+ valida puder ser realizada, o retorno eh zero.
+*/
 int	ft_atoi(const char *str)
 {
 	int	i;

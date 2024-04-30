@@ -6,12 +6,13 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 10:54:04 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/16 11:11:53 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 15:10:27 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief aplica a funcao 'f' a cada char da string*/
 /*char funcao(unsigned int n, char c)
 {
 	c = n + c;

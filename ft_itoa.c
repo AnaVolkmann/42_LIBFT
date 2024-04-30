@@ -6,12 +6,23 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 14:30:20 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/18 16:44:40 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 13:32:23 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/** @brief converte um valor integer em uma string terminada em nulo
+usando a base especificada e amarmazena o resultado na matriz fornecida
+pero param str.
+ @param n valor a ser convertido para uma string.
+ @return um ponteiro para a string terminada em nulo.
+*/
+// lenofn -recebe o número inteiro n e retorna o número de dígitos
+//necessários para representar n.
+// linha 36- incrementa meu len para considerar o sinal negativo.
+// linha 39- dividido por 10 para remover o último dígito, e
+// len é incrementada para contar o número de dígitos.
 int	lenofn(int n)
 {
 	long	numb;

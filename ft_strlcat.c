@@ -6,11 +6,15 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 19:04:27 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/12 18:19:03 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:53:04 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/** @brief anexa a string scr ao final da dest e conta o tamanho 
+do resultado da concatenacao de ambas
+*/
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

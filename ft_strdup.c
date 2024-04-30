@@ -6,11 +6,16 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 11:41:51 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/14 12:25:55 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 14:44:48 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/** @brief cria uma nova string, duplicando o imput.
+ @param s string a ser duplicada
+ @return nova string copia do imput
+*/
 
 char	*ft_strdup(const char *s)
 {

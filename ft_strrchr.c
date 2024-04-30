@@ -6,9 +6,13 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:29:00 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/13 17:51:59 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:09:58 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+/** @brief procura a primeira ocorrencia do char c em s*/
 
 char	*ft_strrchr(const char *s, int c)
 {

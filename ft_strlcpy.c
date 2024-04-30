@@ -6,11 +6,13 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:23:44 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/04/13 16:47:58 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/04/30 15:00:36 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/** @brief copia o conteudo de scr para dest*/
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
