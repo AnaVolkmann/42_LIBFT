@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_factorial.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 18:35:50 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/26 15:32:57 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/06/26 14:50:09 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/06/26 14:50:48 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_strlen(const char *str)
+int	ft_recursive_factorial(int nb)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (nb < 0)
+		return (0);
+	if (nb == 0 || nb == 1)
+		return (1); 
+	return (nb * (ft_recursive_factorial(nb - 1)));
 }
-/*#include <stdio.h>
-#include <string.h>
-
-int main(void)
+/*
+#include <stdio.h>
+int	main(void)
 {
-    printf("%d\n", ft_strlen("qual o tamanho?"));
-    printf("%lu\n", strlen("qual o tamanho?"));
+	printf("%d", ft_recursive_factorial(0));
 }*/

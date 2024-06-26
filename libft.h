@@ -6,7 +6,7 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 21:05:47 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/26 13:43:29 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:44:06 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,21 @@
 
 typedef struct s_list
 {
+	int				number;
+	struct s_list	*target;
+	struct s_list	*prev;
+	struct s_list	*next;
+}	t_list;
+
+/* typedef struct s_list
+{
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
+ */
+t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstnew(void *content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(void *));
@@ -92,23 +100,24 @@ void	ft_putendl_fd(char *s, int fd);
 
 /*..........................CALC.......................*/
 
-int				ft_sqrt(int nb);
-int				ft_power(int nb, int power);
-int				ft_is_prime(int nb);
-int				ft_find_next_prime(int nb);
-int				ft_fibonacci(int index);
-int				ft_recursive_factorial(int nb);
+int		ft_sqrt(int nb);
+int		ft_power(int nb, int power);
+int		ft_is_prime(int nb);
+int		ft_find_next_prime(int nb);
+int		ft_fibonacci(int index);
+int		ft_recursive_factorial(int nb);
 
-/*......................FT_PRINTF..........................*/
+/*.........................PRINTF.........................*/
 
-int				ft_printf(const char *str, ...);
-int				ft_print_str(char *str);
-int				ft_print_ptr(unsigned long long ptr);
-int				ft_print_nbr(int num);
-int				ft_print_unsigned(unsigned int num);
-int				ft_print_hex(unsigned int num, const char conversion);
+int		ft_putchar(int c);
+int		ft_printf(const char *str, ...);
+int		ft_puthexa(unsigned int nbr, const char c);
+int		ft_putnbr(int nbr, int u);
+int		ft_putpointer(unsigned long nbr);
+int		ft_putpointerhexa(unsigned long nbr, const char c);
+int		ft_putstr(char *str);
 
-/*.....................GET_NEXT_LINE........................*/
+/*.....................GET_NEXT_LINE......................*/
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1000000

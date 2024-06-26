@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putpointerhexa.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 18:35:50 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/26 15:32:57 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/05/09 17:13:28 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/06/26 15:30:39 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+int	ft_putpointerhexa(unsigned long nbr, const char c)
 {
-	int	i;
+	char	*base;
+	int		result;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	result = 0;
+	if (c == 'x')
+		base = "0123456789abcdef";
+	else if (c == 'X')
+		base = "0123456789ABCDEF";
+	if (nbr >= 16)
+	{
+		result += ft_putpointerhexa((nbr / 16), c);
+		result += ft_putpointerhexa((nbr % 16), c);
+	}
+	else
+		result += write(1, &base[nbr], 1);
+	return (result);
 }
-/*#include <stdio.h>
-#include <string.h>
-
-int main(void)
-{
-    printf("%d\n", ft_strlen("qual o tamanho?"));
-    printf("%lu\n", strlen("qual o tamanho?"));
-}*/
