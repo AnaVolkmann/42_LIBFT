@@ -1,8 +1,8 @@
 # Libft Introduction 📚
 
-Libft (Library of Functions)
+42 school's first project, libft, is about learning how the standard functions of C programming work, by coding them from scratch and creating our very own library.
 
-In this project, the goal was to create a library of functions, the file structure for this project is the following:
+The file structure for this project is the following:
 
 ### .c Files 
 Where all of the functions are written in. 
